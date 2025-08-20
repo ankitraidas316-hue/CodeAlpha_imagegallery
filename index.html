@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Responsive Image Gallery</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>📸 Responsive Image Gallery</h1>
+      <div class="toolbar">
+        <div class="filters">
+          <button class="btn active" data-filter="all">All</button>
+          <button class="btn" data-filter="nature">Nature</button>
+          <button class="btn" data-filter="city">City</button>
+          <button class="btn" data-filter="people">People</button>
+          <button class="btn" data-filter="animals">Animals</button>
+        </div>
+        <div class="styles">
+          <button class="btn active" data-style="none">Normal</button>
+          <button class="btn" data-style="grayscale(100%)">Grayscale</button>
+          <button class="btn" data-style="sepia(80%)">Sepia</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="grid" id="gallery">
+      <!-- Nature -->
+      <figure class="card" data-category="nature">
+        <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1200&q=80" alt="Mountain lake at sunrise" />
+        <div class="badge">Nature</div>
+        <figcaption class="overlay">Mountain Lake</figcaption>
+      </figure>
+      <figure class="card" data-category="nature">
+        <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1200&q=80" alt="Forest path with sunlight" />
+        <div class="badge">Nature</div>
+        <figcaption class="overlay">Forest Path</figcaption>
+      </figure>
+      <!-- City -->
+      <figure class="card" data-category="city">
+        <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=1200&q=80" alt="Skyline at dusk" />
+        <div class="badge">City</div>
+        <figcaption class="overlay">Skyline Dusk</figcaption>
+      </figure>
+      <figure class="card" data-category="city">
+        <img src="https://images.unsplash.com/photo-1454388683759-ee76c15fee26?w=1200&q=80" alt="Street with neon lights" />
+        <div class="badge">City</div>
+        <figcaption class="overlay">Neon Street</figcaption>
+      </figure>
+      <!-- People -->
+      <figure class="card" data-category="people">
+        <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=1200&q=80" alt="Portrait of a woman smiling" />
+        <div class="badge">People</div>
+        <figcaption class="overlay">Portrait</figcaption>
+      </figure>
+      <figure class="card" data-category="people">
+        <img src="https://images.unsplash.com/photo-1520975916090-3105956dac38?w=1200&q=80" alt="Friends walking in city" />
+        <div class="badge">People</div>
+        <figcaption class="overlay">Friends</figcaption>
+      </figure>
+      <!-- Animals -->
+      <figure class="card" data-category="animals">
+        <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?w=1200&q=80" alt="Cute cat" />
+        <div class="badge">Animals</div>
+        <figcaption class="overlay">Cat</figcaption>
+      </figure>
+      <figure class="card" data-category="animals">
+        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1200&q=80" alt="Flying seagull" />
+        <div class="badge">Animals</div>
+        <figcaption class="overlay">Seagull</figcaption>
+      </figure>
+    </main>
+  </div>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <div class="lightbox-dialog">
+      <img id="lbImage" alt="Expanded view" />
+      <div class="lb-controls">
+        <button class="icon-btn lb-prev" id="prevBtn">◀</button>
+        <button class="icon-btn lb-next" id="nextBtn">▶</button>
+        <button class="icon-btn lb-close" id="closeBtn">✕</button>
+      </div>
+      <div class="lb-meta">
+        <div id="lbCaption">&nbsp;</div>
+        <div class="count" id="lbCount">1 / 1</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
